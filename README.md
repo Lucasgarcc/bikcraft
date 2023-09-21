@@ -1,10 +1,6 @@
 # bikecraft
 ###
 
-<h1 align="left">The Bikecraft</h1>
-
-###
-
 <h2 align="left">About project</h2>
 
 ###
