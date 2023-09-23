@@ -1,4 +1,4 @@
-# bikecraft
+# bikcraft
 ###
 
 <h2 align="left">About project</h2>
