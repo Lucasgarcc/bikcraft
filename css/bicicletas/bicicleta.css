@@ -1,0 +1,140 @@
+.titulo p{
+  font: var(--font-2-xl);
+}
+.titulo h1{
+  margin-bottom: 1.25rem;
+ 
+}
+
+.bicicleta {
+  padding: 3.75rem auto 3.75rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  gap: 2.5rem;
+}
+
+
+.bicicleta-imagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.bicicleta-imagens 
+img {
+  flex: 1;
+  min-width: 200px;
+}
+
+.bicicleta-imagens img:first-child {
+  min-width: 100%;
+}
+
+.bicicleta-conteudo > h2{
+  margin:  2.5rem 0 .75rem 0 ;
+  font: var(--font-1-xs);
+  color: var(--cor-b0);
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+.bicicleta-conteudo p {
+  margin: 0 0 2rem 0;
+  font: var(--font-2-l);
+  color: var(--cor-c5);
+}
+
+.bicicleta-compra {
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+  justify-items: start;
+  gap: .5rem .75rem;
+}
+
+.bicicleta-compra a  {
+  grid-row: span 2;
+}
+
+.bicicleta-compra  span {
+  padding: .25rem .5rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  max-width: max-content;
+  font: var(--font-1-xs);
+  color: var(--cor-c6);
+  background: var(--cor-p1);
+  border-radius: .25rem ;
+}
+
+.bicicleta-informacoes,
+.bicicleta-ficha {
+  padding: 2rem;
+  background: var(--cor-p1);
+}
+
+.bicicleta-informacoes {
+  margin: 0 0 2.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  border-radius: .25rem;
+}
+
+.footer-informacoes img 
+{
+  margin: 0 0 .5rem 0;
+  width: 24px;
+}
+
+.bicicleta-informacoes  h3 {
+  margin: 0 0 .5rem 0;
+  font: var(--font-1-m);
+  color: var(--cor-b0);
+}
+
+
+
+.bicicleta-ficha li {
+  padding: .5rem 0;
+  display:  flex;
+  justify-content: space-between;
+  color: var(--cor-b0);
+  border-bottom: .063rem solid var(--cor-p2) ;
+}
+
+.bicicleta-ficha li:last-child {
+  border-bottom: none;
+}
+
+.bicicleta-ficha span {
+  color: var(--cor-c6);
+}
+
+
+.bicicleta-informacoes li > p {
+  font: var(--font-2-xs);
+  color: var(--cor-c5);
+}
+
+@media (max-width: 800px) {
+  .bicicleta {
+    padding: 2.5rem auto 2.5rem auto;
+    grid-template-columns: 1fr;
+  }
+  .bicicleta-imagens {
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  .bicicleta-informacoes {
+    grid-template-columns: 1fr;
+  }
+  .bicicleta-compra {
+    grid-template-columns: 1fr;
+  }
+
+}

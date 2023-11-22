@@ -1,0 +1,222 @@
+#orcamento {
+  background: linear-gradient(var(--cor-p2) 500px, var(--cor-c1) 0);  
+}
+
+.orcamento {
+  padding-bottom: 7.5rem;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+}
+
+.orcamento h2 {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.orcamento h2::before {
+  display: inline-block;
+  content: '';
+  width: 4px;
+  height: 8px;
+  background: var(--cor-a1);
+  position: absolute;
+  left: -12px;
+}
+
+.orcamento-produto,
+.orcamento-dados{ 
+  padding: 3.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.orcamento-produto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 1.25rem;
+  border-radius: .313rem 0 0 .313rem; 
+  background: var(--cor-p1) url(../../img/dec/bottom-left.svg) no-repeat bottom 1.25rem left 1.25rem;
+}
+
+.orcamento-produto > input {
+  justify-self: start;
+}
+ 
+.orcamento-produto > * {
+  grid-column: 1 / -1;
+}
+
+.orcamento-produto > label {
+ grid-column:  initial;
+}
+
+
+.orcamento-produto label {
+  padding: .75rem 1rem;
+  display: grid;
+  grid-template-columns:  auto 1fr auto;
+  align-items: center;
+  font: 500 1rem/1.5 "Poppins", sans-serif;
+  background: var(--cor-c9);
+  color: var(--cor-c4);
+  border-radius: .25rem;
+  cursor: pointer;
+  border: 1px solid var(--cor-c9);
+}
+
+.orcamento-produto input {
+  opacity: 0;
+  position: absolute;
+  pointer-events:  none;
+}
+
+
+.orcamento-produto input:checked + label {
+  background: var(--cor-b0);
+  color: var(--cor-p2);
+}
+
+
+#bikcraft:checked ~ #orcamento-bikcraft,
+#seguro:checked ~ #orcamento-seguro{
+ display: grid;
+ gap: 1.25rem;
+}
+
+.orcamento-produto label::before {
+  margin-right: .5rem;
+  display: inline-block;
+  content: '';
+  width:  12px;
+  height: 12px;
+  border: 1px solid var(--cor-c6);
+  border-radius:  50%;
+  box-sizing: border-box;
+} 
+
+.orcamento-produto input:checked + label::before {
+  border-color: var(--cor-c8);
+  box-shadow:  inset  0 0 0 3px var(--cor-b0), inset 0 0 0 6px var(--cor-a2);
+} 
+
+.orcamento-produto label::before {
+  margin-right: .5rem;
+  display: inline-block;
+  content: '';
+  width:  12px;
+  height: 12px;
+  border: 1px solid var(--cor-c6);
+  border-radius:  50%;
+  box-sizing: border-box;
+} 
+
+.orcamento-produto label:hover {
+  background-color: var(--cor-c8);
+  border: 1px solid var(--cor-c8);
+}
+
+.orcamento-produto label:focus {
+  background-color: var(--cor-c9);
+  box-shadow: 0 0 0 2px var(--cor-p2) ;
+}
+
+.orcamento-produto label span{
+  display: none;
+} 
+
+.orcamento-produto input:focus + label {
+  box-shadow: 0 0 0 2px var(--cor-a1) ;
+  border: 1px solid var(--cor-p2);
+}
+
+.orcamento-produto input:checked + label span{
+  display: inline-block;
+} 
+
+.orcamento-conteudo label{
+  margin: 1.25rem 0;
+}
+
+.orcamento-dados {
+  border-radius: 0 .313rem .313rem 0; 
+  background: var(--cor-b0) url(../../img/dec/bottom-right-p.svg) no-repeat bottom 1.25rem right 1.25rem;
+}
+
+.orcamento-produto h2 {
+  font: var(--font-1-xs);
+  color: var(--cor-c5);
+}
+
+.orcamento-produto h2,
+.orcamento-dados h2:nth-of-type(n+2) {
+  margin: 1.25rem 0 0 0 ;
+}
+
+.orcamento-conteudo h2 {
+  font: var(--font-1-xs);
+  color: var(--cor-b0);
+}
+
+.orcamento-dados h2{
+  font: var(--font-1-xs);
+  color: var(--cor-c9);
+}
+
+.orcamento-detalhes {
+  margin: 1.25rem 0 ;
+  padding: 1.25rem;
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  background: var(--cor-b0);
+  border-radius: .25rem;
+}
+
+.orcamento-detalhes li {
+  margin-bottom:.5rem;
+  display: flex;
+  align-items:  center;
+}
+
+.orcamento-detalhes li img {
+  margin: 0 .5rem 0 0;
+  width: 16px;
+}
+
+.orcamento-detalhes ul {
+  font: var(--font-1-xs);
+  color: var(--cor-c8);
+}
+
+.orcamento-produto input:checked + label + .orcamento-detalhes {
+  display: grid;
+}
+
+@media (max-width: 1200px) {
+  .orcamento-produto,
+  .orcamento-dados {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .orcamento {
+    padding: 2rem ;
+    grid-template-columns: 1fr;
+  }
+  .orcamento-produto {
+    border-radius:  .313rem .313rem 0 0;
+    background: var(--cor-p1);
+  }
+  .orcamento-dados {
+    border-radius: 0 0 .313rem .313rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .orcamento-produto {
+    grid-template-columns:  1fr;
+  }
+}

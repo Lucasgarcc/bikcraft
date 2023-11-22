@@ -1,0 +1,91 @@
+.depoimento {
+  margin: 3.75rem 0 0 0;
+  display: grid;
+  grid-template-columns:  1fr 1fr; /* pai */
+  background: var(--cor-a1);
+  overflow: hidden;
+}
+
+.depoimento blockquote p{
+ font: var(--font-1-xl);
+}
+
+.depoimento-conteudo blockquote span{
+  margin:  0 auto;
+ font: var(--font-1-m-b);
+ color: var(--cor-a4);
+}
+
+.depoimento img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.depoimento-conteudo {
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem 5rem 5rem;
+  align-self: end; /* alinha la embaixo - filho  */
+  background: url(../../img/dec/bottom-right-p.svg) no-repeat bottom 2.5rem right 2.5rem;
+}
+
+.depoimento-conteudo blockquote p {
+  margin:  0 0 2rem 0;
+  font-family:  "Merriweather";
+  font-style: italic;
+  font-weight: 900;
+  max-width: 32ch;
+  position: relative
+}
+
+.depoimento p::before,
+.depoimento p::after {
+  font-size: 5rem;
+  color: var(--cor-a2);
+  position: absolute;
+}
+
+.depoimento p::before {
+  content: '“';
+  left: -3.125rem;
+  top: -1.25rem;
+}
+
+.depoimento p::after {
+  content: '”';
+}
+
+
+@media (min-width: 1200px) {
+  .depoimento img {
+    max-height: 520px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .depoimento img {
+    max-height: 520px;
+  }
+  
+  .depoimento span {
+    margin:  0 auto;
+    font: var(--font-1-m-b-);
+   color: var(--cor-a4);
+  }
+}
+@media ( max-width: 800px ) {
+  .depoimento {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .depoimento-conteudo {
+    padding: 2.5rem 1.25rem;
+    justify-content: center;
+  }
+  .depoimento p::before {
+    content: '“';
+    left: -2.25rem;
+    top: -1.25rem;
+  }
+}

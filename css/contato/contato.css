@@ -1,0 +1,110 @@
+#contato {
+background: linear-gradient(var(--cor-p2) 500px, var(--cor-c1) 0);  
+}
+.contato {
+  display: grid;
+  grid-template-columns:  5fr 7fr;
+}
+
+.contato h2 {
+  font: var(--font-1-m);
+  color: var(--cor-b0);
+}
+
+.contato-endereco,
+.contato-meios {
+  font: var(--font-2-s);
+  color: var(--cor-c4);
+}
+
+.contato-dados,
+.contato-formulario {
+  padding: 3.75rem;
+  margin: 0 0 2.5rem 0 ;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contato-dados {
+  background: var(--cor-p1) url(../../img/dec/bottom-left.svg) no-repeat bottom 1.25rem left 1.25rem;
+  border-radius: .313rem 0 0 .313rem;
+}
+
+.contato-dados h2 {
+ margin: 0 0 3.75rem 0;
+}
+
+
+.contato-formulario {
+  background: var(--cor-b0) url(../../img/dec/bottom-right.svg) no-repeat bottom 1.25rem right 1.25rem;
+  border-radius:  0 .313rem .313rem 0;
+}
+
+.contato-endereco {
+  margin: 0 0 2rem 0;
+  padding: 0 0 0 1.75rem;
+  background: url(../../img/icones/local.svg) no-repeat 0 2px;
+}
+
+.contato-endereco p {
+  margin: 0 0 .5rem 0;
+}  
+
+.contato-meios a {
+  margin: 0 0 .5rem 0;
+  padding: 0 0 0 1.75rem;
+  display: block;
+  max-width: nax-content;
+}
+
+.contato-meios a:hover {
+  color: var(--cor-b0)
+}
+
+.contato-meios a:first-child {
+  background: url(../../img/icones/email.svg) no-repeat 0 2px;
+}
+
+.contato-meios a:nth-child(2) {
+  margin: 0 0 2rem 0;
+}
+
+.contato-meios a:nth-child(3) {
+  margin: 0 0 3.75rem 0;
+  background: url(../../img/icones/telefone.svg) no-repeat 0 2px;
+}
+
+.contato-redes {
+  padding: 0 0 0 1.75rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.contato-redes img {
+  width: 25px;
+}
+
+
+@media (max-width: 800px) { 
+  .contato  {
+    margin: 2.5rem 0 0 0;
+    grid-template-columns: 1fr;
+  }
+  .contato-dados,
+  .contato-formulario {
+    padding: 1.25rem;
+  }
+  .contato-dados {
+    border-radius: .313rem .313rem 0 0;
+    background: var(--cor-p1);
+  }
+  .contato-formulario {
+    border-radius: 0 0  .313rem .313rem;
+  }
+  .contato-dados h2,
+  .contato-meios a:nth-child(3) {
+    margin: 0 0 2rem 0;
+  }
+  .contato.redes {
+    margin: 0 0 .75rem 0;
+  }
+}

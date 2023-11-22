@@ -1,0 +1,76 @@
+.container { 
+  box-sizing: border-box; 
+  margin: 0 auto 0 auto; 
+  padding: 0 1.25rem 0 1.25rem; 
+  max-width: 1200px; 
+}
+
+.container-f { 
+  box-sizing: border-box; 
+  margin: 0 auto 0 auto; 
+  max-width: 1200px; 
+}
+
+.link {
+  display: inline-block;
+  color: var(--cor-a1);
+  font: 500 1.5rem/1.5 "Poppíns", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.botao.secundario {
+  background: var(--cor-c9);
+  color: var(--cor-c2);
+}
+
+.botao.secundario:hover {
+  background: var(--cor-c8);
+}
+
+.tecnologia a::after {
+  content: '';
+  display: block;
+  margin:  .25rem 0 0 0 ;
+  width: 0px;
+  height: .125rem;
+  background: currentColor;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.tecnologia a:hover::after {
+  width: 100%;
+  color: var(--cor-b0);
+}
+
+.link:hover {
+  color: var(--cor-b0);
+}
+
+/* titulo internas */
+.titulo-bg {
+  padding: 3.75rem 0 3.75rem 0;
+  background-color: var(--cor-p2);
+}
+
+.titulo {
+  background: url(../../img/dec/top-right.svg) no-repeat top right 1.25rem ;
+}
+
+.titulo p {
+  margin: 0 0 .25rem 0 ;
+  font: var(--font-2-l-b);
+}
+
+
+@media ( max-width: 800px) {
+  .titulo-bg {
+    padding: 2.5rem 0 .25rem 0;
+  }
+  .titulo p {
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+  }
+}

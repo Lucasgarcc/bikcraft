@@ -1,0 +1,95 @@
+.tecnologia-bg{
+  background: var(--cor-p2) ;
+  box-shadow: inset 0 7.5rem var(--cor-b0), inset 0 -7.5rem var(--cor-b0); /* efeito vazamento da imagem design*/
+}
+
+.tecnologia {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2.5rem;
+}
+
+.tecnologia-conteudo {
+  padding: 10rem 0 10rem 0; /* 160px*/
+}
+
+.tecnologia-conteudo > span{
+  display: block;
+  margin: 0 0 2rem 0;
+  font: var(--font-2-l-b);
+  color: var(--cor-c5);
+}
+
+.tecnologia-conteudo > h2{
+  margin: 0 0 2rem 0;
+  color: var(--cor-b0);
+}
+
+.tecnologia-conteudo h2 span{
+  color: var(--cor-a1);
+}
+
+.tecnologia-conteudo > p{
+  margin: 0 0 2rem 0;
+  font: var(--font-2-l);
+  color: var(--cor-c5);
+}
+
+.tecnologia a {
+  margin: 0 0 5rem 0;
+}
+
+.tecnologia-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.tecnologia-vantagens {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.tecnologia-vantagens-itens >h3{
+  margin: 0 0 .5rem 0 ;
+  width: max-content; /* evita quebra de titulo do conteudo */
+  color: var(--cor-b0);
+  font: var(--font-1-m);
+}
+
+.tecnologia-vantagens-itens> p{
+  font: var(--font-2-s);
+  color: var(--cor-c5);
+}
+
+.tecnologia-vantagens-itens img{
+  margin: 0 0 .5rem 0;
+  width: 24px;
+}
+
+@media (max-width: 800px) {
+  .tecnologia-bg {
+    box-shadow: initial; /*  volta ao valor inicial null */
+  }
+  .tecnologia {
+    grid-template-columns: 1fr;
+  }
+
+  .tecnologia-conteudo {
+    padding: 3.75rem 0 3.75rem 0;
+  }
+  .tecnologia-imagem img {
+    display: none;
+  }
+  .tecnologia a {
+    margin: 0 0 3.75rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .tecnologia-vantagens {
+    flex-direction:  column;
+  }
+
+}

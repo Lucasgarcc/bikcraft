@@ -1,0 +1,39 @@
+.titulo h1 {
+  color: var(--cor-b0);
+}
+
+.titulo h1 span { 
+  color: var(--cor-a1);
+}
+
+.termos  {
+  margin: 3.75rem 0 3.75rem 0;
+  color: var(--cor-c9);
+  font: var(--font-2-s);
+}
+
+
+.titulo p  {
+  color: var(--cor-c5);
+  font: var(--font-2-l-b);
+  text-transform: uppercase;
+}
+
+
+.termos h2  {
+  margin: 0 0 1.25rem 0;
+  color: var(--cor-p1);
+  font: var(--font-1-l);
+  font-weight: 600;
+}
+
+
+.termos p + h2  {
+  margin: 0 0 1.25rem 0;
+}
+
+.termos p {
+  margin: 0 0 1.5rem 0;
+  max-width: 75ch;
+}
+
